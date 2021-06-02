@@ -9,15 +9,17 @@ public class TestingApp {
         int count = View.getNumofLot();
         User hkh = new User(count);
 
-        lotto.lottoList = lottoFac.lottoFactory();
+        lotto.lottoList = lottoFac.pickAuto();
         lotto.bonus = lottoFac.pickBonus(lotto.lottoList);
 
+        System.out.println(lotto.lottoList);
+        System.out.println("Bonus Number : " + lotto.bonus);
 
         String AUTO_OR_MANUAL = View.autoManual();
 
         if (AUTO_OR_MANUAL == "Auto") {
             for (int i = 0; i < hkh.count; i++) {
-                hkh.userPick = lottoFac.lottoFactory();
+                hkh.userPick = lottoFac.pickAuto();
                 lotto.checking(hkh.userPick);
             }
         }

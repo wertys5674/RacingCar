@@ -2,11 +2,12 @@ package Testing;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.StringTokenizer;
 
 public class LottoFactory {
     public static int bonusNum;
 
-    List<Integer> lottoFactory() {
+    List<Integer> pickAuto() {
         List<Integer> list = new ArrayList<>();
         while (list.size() < Lotto.SIZE_OF_LOTTO) {
             list.add(pickNumber(list));
@@ -28,11 +29,11 @@ public class LottoFactory {
 
     List<Integer> pickManual() {
         List<Integer> manualPick = new ArrayList<>();
-        while(manualPick.size()<Lotto.SIZE_OF_LOTTO){
-            if(manualPick.contains(View.inputNum()))
-                continue;
-            else
-                manualPick.add(View.inputNum());
+        String str = View.inputNum();
+        StringTokenizer strTok = new StringTokenizer(str, ",");
+
+        while (manualPick.size() < Lotto.SIZE_OF_LOTTO) {
+            manualPick.add(Integer.parseInt(strTok.nextToken()));
         }
         return manualPick;
     }

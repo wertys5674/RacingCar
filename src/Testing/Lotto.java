@@ -2,13 +2,12 @@ package Testing;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class Lotto {
     public static final int SIZE_OF_LOTTO = 6;
     int bonus;
     List<Integer> lottoList = new ArrayList<>();
-    int[] priceArr ={0};
+    int[] priceArr = {0};
 
     void checking(List<Integer> mylist) {
         switch (sameCount(mylist)) {
@@ -28,7 +27,7 @@ public class Lotto {
                 System.out.println("4등, 4개");
                 break;
             case 5:
-                if(isSecond(mylist))
+                if (isSecond(mylist))
                     System.out.println("2등, 보너스 번호 일치, 5개");
                 else
                     System.out.println("3등, 보너스 번호 불일치, 5개");
@@ -50,7 +49,7 @@ public class Lotto {
         return count;
     }
 
-    boolean isSecond(List<Integer> mylist){
+    boolean isSecond(List<Integer> mylist) {
         return mylist.contains(LottoFactory.bonusNum);
     }
 }

@@ -1,6 +1,7 @@
 package Testing;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class User {
     List<Integer> userPick = new ArrayList<>();
