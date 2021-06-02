@@ -32,12 +32,12 @@ public class View {
 
         StringTokenizer strTok = new StringTokenizer(inputSixNum, ",");
 
-        checkingStr(strTok);
+        validateStr(strTok);
 
         return inputSixNum;
     }
 
-    private static void checkingStr(StringTokenizer strTok) {
+    private static void validateStr(StringTokenizer strTok) {
         for (int i = 0; i < Lotto.SIZE_OF_LOTTO; i++) {
             int checkNum = Integer.parseInt(strTok.nextToken());
             if (checkNum > 45 || checkNum < 0)
