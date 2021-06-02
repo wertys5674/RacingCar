@@ -50,6 +50,6 @@ public class Lotto {
     }
 
     boolean isSecond(List<Integer> mylist) {
-        return mylist.contains(LottoFactory.bonusNum);
+        return mylist.contains(this.bonus);
     }
 }
