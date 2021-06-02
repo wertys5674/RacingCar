@@ -8,7 +8,6 @@ public class User {
     List<Lotto> userLottos = new ArrayList<>();
     int count = 0;
 
-
     public User(int count) {
         this.count = count;
     }

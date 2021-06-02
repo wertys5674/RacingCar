@@ -7,7 +7,6 @@ public class Lotto {
     public static final int SIZE_OF_LOTTO = 6;
     int bonus;
     List<Integer> lottoList = new ArrayList<>();
-    int[] priceArr = {0};
 
     void checking(List<Integer> mylist) {
         switch (sameCount(mylist)) {
