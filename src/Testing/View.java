@@ -32,12 +32,17 @@ public class View {
 
         StringTokenizer strTok = new StringTokenizer(inputSixNum, ",");
 
+        checkingStr(strTok);
+
+        return inputSixNum;
+    }
+
+    private static void checkingStr(StringTokenizer strTok) {
         for (int i = 0; i < Lotto.SIZE_OF_LOTTO; i++) {
             int checkNum = Integer.parseInt(strTok.nextToken());
             if (checkNum > 45 || checkNum < 0)
-                throw new IllegalArgumentException("입력하신 숫자가 올바르지 않습니다. 1~45사이의 숫자를 입력해주세요.");
+                throw new IllegalArgumentException("입력하신" +
+                        " 숫자가 올바르지 않습니다. 1~45사이의 숫자를 입력해주세요.");
         }
-
-        return inputSixNum;
     }
 }
